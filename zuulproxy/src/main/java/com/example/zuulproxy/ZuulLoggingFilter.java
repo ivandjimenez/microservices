@@ -1,4 +1,5 @@
-package com.example.microservices.netflixzuulapigatewayserver;
+package com.example.zuulproxy;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
@@ -24,7 +25,11 @@ public class ZuulLoggingFilter extends ZuulFilter {
 		
 		HttpServletRequest request =
 		RequestContext.getCurrentContext().getRequest();
+		
+		
 	    logger.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL()));
+		
+		
 		return null;
 	}
 
@@ -41,3 +46,4 @@ public class ZuulLoggingFilter extends ZuulFilter {
 	}
 
 }
+
