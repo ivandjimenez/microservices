@@ -1,0 +1,70 @@
+1----Sign in to PWS:
+
+cf login -a https://api.run.pivotal.io
+
+2------Logout
+cf logout
+
+----Push the app to PWS:
+cf push APP_NAME
+
+----View the Logs
+cf logs cf-demo --recent
+cf logs cf-demo
+
+
+----List the available ElephantSQL plans:
+cf marketplace -s elephantsql
+
+----Create a service instance with the free plan:
+cf create-service elephantsql turtle cf-demo-db
+
+----Bind the newly created service to the app:
+cf bind-service cf-demo cf-demo-db 
+		APP_NAME SERVICE_INSTANCE
+
+---Unbind service
+cf unbind-service APP_NAME SERVICE_INSTANCE
+
+
+----create-user-provided-service
+ cf create-user-provided-service SERVICE_INSTANCE
+
+----update-user-provided-service
+cf update-user-provided-service SERVICE_INSTANCE 
+
+
+----Restage the app:
+cf restage cf-demo
+
+----Restart the app:
+cf restart APP_NAME
+
+
+----Verify the new service is bound to the app:
+cf services
+
+----Increase the number of app instances from one to two:
+cf scale cf-demo -i 2
+
+----Check the status of the app and verify there are two instances running:
+cf app cf-demo
+
+----List all app deployed in current space
+cf apps
+
+----Increase the memory limit for each app instance:
+cf scale cf-demo -m 1G
+
+----Decrease the disk limit for each app instance:
+cf scale cf-demo -k 512M
+
+---Verify value of env variable
+cf env APP_NAME
+
+---Update value of env variable
+cf set-env APP_NAME ENV_VAR_NAME ENV_VAR_VALUE
+
+
+---Delete app
+cf delete APP_NAME -r
