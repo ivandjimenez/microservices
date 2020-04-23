@@ -7,6 +7,8 @@ cf logout
 
 ----Push the app to PWS:
 cf push APP_NAME
+$ cf push -m 128M
+
 
 ----View the Logs
 cf logs cf-demo --recent
@@ -39,6 +41,9 @@ cf restage cf-demo
 
 ----Restart the app:
 cf restart APP_NAME
+
+-----Rolling Restart
+cf7 restart APP-NAME --strategy rolling
 
 
 ----Verify the new service is bound to the app:
