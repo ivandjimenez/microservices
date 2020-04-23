@@ -53,6 +53,12 @@
     <artifactId>spring-data-rest-hal-browser</artifactId>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-rest-repository -->
+<dependency>
+    <groupId>org.springframework.data</groupId>
+    <artifactId>spring-data-rest-repository</artifactId>
+    <version>1.0.0.RELEASE</version>
+</dependency>
 
 <!-- <dependency> -->
 <!--     <groupId>com.fasterxml.jackson.dataformat</groupId> -->
