@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetCourseDetailsResponse xmlns="http://ivanmicroservices.com/courses">
+	<CourseDetails>
+		<id>123</id>
+		<name>Spring Micro services SOAP web services</name>
+		<description>Learn SOAP web services</description>
+	</CourseDetails>
+</GetCourseDetailsResponse>
