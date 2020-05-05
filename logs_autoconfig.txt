@@ -1,0 +1,9 @@
+
+SampleAutoConfiguration matched:
+      - @ConditionalOnClass found required class 'com.example.autoconfigu.application.service.HelloService' (OnClassCondition)
+
+   SampleAutoConfiguration#helloService matched:
+      - @ConditionalOnMissingBean (types: com.example.autoconfigu.application.service.HelloService; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+   SampleAutoConfiguration#springService matched:
+      - @ConditionalOnProperty (module.enabled) matched (OnPropertyCondition)

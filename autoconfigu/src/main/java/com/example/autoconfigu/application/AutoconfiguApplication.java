@@ -13,6 +13,9 @@ public class AutoconfiguApplication implements CommandLineRunner{
 	@Autowired
 	HelloService helloservice;
 	
+	@Autowired
+	private SpringService springService;
+	
 	public static void main(String[] args) {
 		SpringApplication.run(AutoconfiguApplication.class, args);
 	}
@@ -20,6 +23,8 @@ public class AutoconfiguApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		helloservice.helloWorld();
+		System.out.println("Spring service fully qualified class name: " + springService.getClass());
+
 	}
 	
 
