@@ -26,7 +26,7 @@ public class SampleAutoConfiguration {
 	
 	
 	@Bean
-	@ConditionalOnProperty(prefix = "module", name = "enabled",matchIfMissing = true)
+	@ConditionalOnProperty(prefix = "module", name = "enabled",havingValue="true",matchIfMissing = true)
 	public SpringService springService() {
 		return new SpringService();
 	}
